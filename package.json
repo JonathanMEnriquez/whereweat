@@ -1,21 +1,42 @@
 {
-  "name": "celerium-game",
+  "name": "whereweat",
   "version": "0.1.0",
   "private": true,
-  "main": "public/Main.js",
+  "homepage": "./",
+  "main": "src/start.js",
   "dependencies": {
+    "electron": "7.1.9",
+    "eslint": "4.5.0",
+    "eslint-config-airbnb": "15.1.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.3.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-scripts": "0.9.5"
   },
   "devDependencies": {
-    "electron": "7.1.9"
+    "electron-builder": "22.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nf start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "electron-start": "electron ."
+    "electron": "electron .",
+    "electron-start": "node src/start-react",
+    "react-start": "BROWSER=none react-scripts start",
+    "pack": "build --dir",
+    "dist": "npm run build && build",
+    "postinstall": "install-app-deps"
+  },
+  "build": {
+    "appId": "com.electron.electron-with-create-react-app",
+    "win": {
+      "iconUrl": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-256.png"
+    },
+    "directories": {
+      "buildResources": "public"
+    }
   }
 }
