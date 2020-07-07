@@ -5,7 +5,7 @@
   "homepage": "./",
   "main": "src/start.js",
   "dependencies": {
-    "electron": "7.1.9",
+    "electron": "9.1.0",
     "eslint": "4.5.0",
     "eslint-config-airbnb": "15.1.0",
     "eslint-plugin-import": "2.7.0",
